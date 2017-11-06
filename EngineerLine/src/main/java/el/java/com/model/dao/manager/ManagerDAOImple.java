@@ -1,5 +1,5 @@
 package el.java.com.model.dao.manager;
 
-public class ManagerDAOImple {
+public class ManagerDAOImple implements ManagerDAO{
 
 }

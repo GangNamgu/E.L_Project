@@ -1,4 +1,4 @@
-package el.java.com.service;
+package el.java.com.service.car;
 
 public interface CarService {
 	

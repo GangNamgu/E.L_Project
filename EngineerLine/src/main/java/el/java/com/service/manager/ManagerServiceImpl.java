@@ -1,12 +1,11 @@
-package el.java.com.service;
+package el.java.com.service.manager;
 
 import javax.inject.Inject;
 
 import el.java.com.model.dao.Engineer.EngineerDAO;
-import el.java.com.model.dao.car.CarDAO;
 import el.java.com.model.dao.manager.ManagerDAO;
 
-public class CarServiceImpl implements CarService{
+public class ManagerServiceImpl implements ManagerService{
 	@Inject
-	CarDAO cDao;
+	ManagerDAO mDao;
 }

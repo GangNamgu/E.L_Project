@@ -2,7 +2,7 @@ package el.java.com.controller.car;
 
 import javax.inject.Inject;
 
-import el.java.com.service.CarService;
+import el.java.com.service.car.CarService;
 
 public class CarController {
 	@Inject
