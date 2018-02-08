@@ -2,3 +2,29 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="manager">
+	<!-- 로그인 -->
+	<select id="login" returnType="ManagerDTO">
+		select * from manager;
+	</select>
+	
+	<!-- 전체 기술자 기본 정보 보기 -->
+	<select id="showEngineerForManager" resultType="EngineerDTO">
+		select * from engineer;
+	</select>
+	<!-- 전체 기술자 일정 보기 -->
+	<select id="showEngineerScheduleForManager" resultType="ScheduleDTO">
+		select * from schedule;
+	</select>
+
+	<!-- 전체 기술자 일정 - 수정 -->
+	<!-- 기술자 기본 정보 -->
+	<update id="updateEnigneerFromManger">
+		update engineermset set eHoliday = #{eHoliday}, eStartHour = #{eStartHour}, eStartMinute = #{eStartMinute}, e_cName = #{e_cName} where eName = #{eName}
+	</update>
+	<!-- 기술자 일정 -->
+	<update id="updateEngineerScheduleFromManager">
+		update schedule set s_oName = #{s_oName}, sPlace = #{sPlace}, sEndHour = #{sEndHour}, sEndMinute = #{sEndMinute} where sSeq = #{sSeq}
+	</update>
+</mapper>

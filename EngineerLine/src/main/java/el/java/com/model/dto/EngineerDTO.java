@@ -1,19 +1,19 @@
 package el.java.com.model.dto;
 
 public class EngineerDTO {
-	private String eId;		//¿£Áö´Ï¾î ¾ÆÀÌµğ
-	private String ePassword;//¿£Áö´Ï¾î ºñ¹Ğ¹øÈ£
-	private String eName;	//¿£Áö´Ï¾î ÀÌ¸§
-	private int tNum;		//ÆÀ ¹øÈ£
-	private String ePlace;	//Àå¼Ò
-	private String eAS;		//a/s ¿Ï·á À¯¹«(N/Y)
-	private String holiday;	//ÈŞ¹«(N/Y)
+	private String eName;		//ê¸°ìˆ ì ì´ë¦„(ì•„ì´ë””)
+	private String ePassword;	//ê¸°ìˆ ì ë¹„ë°€ë²ˆí˜¸
+	private String eTeam;		//ê¸°ìˆ ìê°€ ì†í•œ íŒ€
+	private String eHoliday;	//ê¸°ìˆ ìì˜ íœ´ë¬´ ì—¬ë¶€(default' ')
+	private String eStartHour;	//ê¸°ìˆ ìê°€ ì‚¬ë¬´ì‹¤ì—ì„œ ì¶œë°œí•œ ì‹œ(default' ')
+	private String eStartMinure;//ê¸°ìˆ ìê°€ ì‚¬ë¬´ì‹¤ì—ì„œ ì¶œë°œí•œ ë¶„(default' ')
+	private String e_cName;		//ê¸°ìˆ ìê°€ ì‚¬ìš© ì¤‘ì¸ ì°¨ëŸ‰(=cName/ì¤‘ë³µ ê°€ëŠ¥/default' ')
 	
-	public String geteId() {
-		return eId;
+	public String geteName() {
+		return eName;
 	}
-	public void seteId(String eId) {
-		this.eId = eId;
+	public void seteName(String eName) {
+		this.eName = eName;
 	}
 	public String getePassword() {
 		return ePassword;
@@ -21,34 +21,34 @@ public class EngineerDTO {
 	public void setePassword(String ePassword) {
 		this.ePassword = ePassword;
 	}
-	public String geteName() {
-		return eName;
+	public String geteTeam() {
+		return eTeam;
 	}
-	public void seteName(String eName) {
-		this.eName = eName;
+	public void seteTeam(String eTeam) {
+		this.eTeam = eTeam;
 	}
-	public int gettNum() {
-		return tNum;
+	public String geteHoliday() {
+		return eHoliday;
 	}
-	public void settNum(int tNum) {
-		this.tNum = tNum;
+	public void seteHoliday(String eHoliday) {
+		this.eHoliday = eHoliday;
 	}
-	public String getePlace() {
-		return ePlace;
+	public String geteStartHour() {
+		return eStartHour;
 	}
-	public void setePlace(String ePlace) {
-		this.ePlace = ePlace;
+	public void seteStartHour(String eStartHour) {
+		this.eStartHour = eStartHour;
 	}
-	public String geteAS() {
-		return eAS;
+	public String geteStartMinure() {
+		return eStartMinure;
 	}
-	public void seteAS(String eAS) {
-		this.eAS = eAS;
+	public void seteStartMinure(String eStartMinure) {
+		this.eStartMinure = eStartMinure;
 	}
-	public String getHoliday() {
-		return holiday;
+	public String gete_cName() {
+		return e_cName;
 	}
-	public void setHoliday(String holiday) {
-		this.holiday = holiday;
+	public void sete_cName(String e_cName) {
+		this.e_cName = e_cName;
 	}
 }

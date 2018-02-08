@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="object">
+	<!-- 방문 목적 목록 -->
+	<select id="showObjectList" resultType="ObjectDTO">
+		select * from object;
+	</select>
+	
+	<!-- 방문 목적 관리 - 추가 -->
+	<insert id="insertObject">
+		insert into object values(num.NEXTVAL, #{oName});
+	</insert>
+	
+	<!-- 방문 목적 관리 - 수정 -->
+	<update id="updateObject">
+		update object set oName = #{oName} where oSeq = #{oSeq}
+	</update>
+	
+	<!-- 방문 목적 관리 - 삭제 -->
+	<delete id="deleteObject">
+		delete from object where oName = #{oName};
+	</delete>
+</mapper>

@@ -2,3 +2,36 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="engineer">
+	<!-- 접속한 기술자 이름 보여주기 -->
+	<select id="showEngineerName" resultType="EngineerDTO">
+		select eName from engineer;
+	</select>
+	
+	<!-- //접속한 기술자의 일정 보여주기(Engineer, schedule) -->
+	<select id="showEngineer" resultType="EngineerDTO">
+		select * from engineer where eName = #{eName}
+	</select>
+	<select id="showSchedule" resultType="ScheduleDTO">
+		select * from schedule where s_eName = #{eName}
+	</select>
+	
+	<!-- 일정 추가 -->
+	<insert id="insertSchedule">
+		insert into schedule(sSeq, s_eName) values (num.NEXTVAL, #{eName});
+	</insert>
+	
+	<!-- 일정 수정 -->
+	<update id="updateSchedule">
+		update schedule set s_oName = #{s_oName}, sPlace = #{sPlace}, sEndHour = #{sEndHour}, sEndMinute = #{sEndMinute} where sSeq = #{sSeq}
+	</update>
+	
+	<!-- 팀 일정 보기 -->
+	<select id="showEngineers" returnType="EngineerDTO">
+		select * from engineer where eTeam = #{eTeam}
+	</select>
+	<select id = "showEngineersSchedule" returnType="scheduleDTO">
+		select * from schedule where eTeam = #{eTeam}
+	</select>
+</mapper>
